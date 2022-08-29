@@ -1,15 +1,14 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App
 {
     public static void main( String[] args )
     {
-        ProductionLine productionLine = new CrossProductionLine();
-        AutoFactory autoFactory = new AutoFactory(5,productionLine);
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+        AutoFactory autoFactory = ctx.getBean("autoFactory", AutoFactory.class);
         autoFactory.runProduction();
     }
 }
