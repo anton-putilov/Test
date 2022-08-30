@@ -1,8 +1,11 @@
 package org.example;
 
+import java.util.Random;
+
 public class CrossProductionLine implements ProductionLine{
     @Override
-    public void work() {
-        System.out.println("CROSS");
-    }
+    public Car work() {
+        Random random = new Random();
+        return new Car("CROSS", random.nextBoolean());
+        }
 }
