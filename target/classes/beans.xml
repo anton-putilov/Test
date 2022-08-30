@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="autoFactory" class="org.example.AutoFactory">
-        <constructor-arg index="0" value="3"/>
+        <constructor-arg index="0" value="10"/>
         <constructor-arg index="1" ref="sedan_production_line"/>
     </bean>
 
